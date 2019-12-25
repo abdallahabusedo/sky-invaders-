@@ -1,0 +1,19 @@
+{
+    "batch-number" : 5,
+    "batch-distance" : 12,
+    "object-distance" : 2.5,
+    "initial-speed" : 0.1,
+    "speed-increment": 0.001,
+    "width" : 2,
+    "height" : 2,
+    "length" : 2,
+    "shootPower": 3,
+    "direction-x": 0,
+    "direction-y": 0,
+    "direction-z": -1,
+    "health": 100,
+    "start-z" : 30,
+    "final-z" : -2,
+    "y-distance" : 2.5,
+    "collision-accuracy": 2.4
+}
