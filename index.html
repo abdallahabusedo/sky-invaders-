@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Gfx Lab</title>
+        <link rel="stylesheet" href="./style.scss" />
+        <script src="/static/sounds/howler.js"></script>
+<script>
+    var sound = new Howl({
+      src: ['sound.webm', 'sound.mp3']
+    });
+</script>
+        <style>
+            @font-face {
+                font-family: "haloregular";
+                src: url("./fonts/halo/halo____-webfont.woff2") format("woff2"),
+                    url("./fonts/halo/halo____-webfont.woff") format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+            div#text {
+                position: absolute;
+                /* border: 1px solid black; */
+                width: 1500px;
+                min-height: 20px;
+                font-size: 1.3em;
+                color: #fafafa;
+                font-family: "haloregular";
+            }
+            div#text div#health,
+            div#score {
+                margin: 0;
+                width: 30%;
+                display: inline-block;
+                padding: 20px;
+            }
+            div#text div#score {
+                float: right;
+            }
+            div#text div#health span#bar {
+                background-color: green;
+                display: inline-block;
+                min-height: 24px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="text">
+            <div id="health">
+                Health: <br/>
+                <span id="bar"></span>
+            </div>
+            <div id="score">
+                Score:
+                <span id="score"></span>
+            </div>
+        </div>
+
+        <div>
+            <canvas width="1500" height="650" id="app" tabindex="1">
+                <!-- Here is where we will draw our scene -->
+            </canvas>
+        </div>
+        <div>
+            <span>Scene: </span>
+            <select name="scenes" id="scenes"></select>
+        </div>
+        <div id="controls"></div>
+        <!-- The following line includes our script which will run WebGL -->
+        <script src="./src/app.ts"></script>
+    </body>
+</html>
